@@ -37,6 +37,7 @@ This system automatically places SIP calls, converts dynamic text messages into 
 
 ## Architecture
 
+```text
 FastAPI Backend (Docker)
         ↓
 Generate TTS WAV
@@ -50,7 +51,10 @@ SIP Call Origination
 Zoiper / SIP Endpoint
         ↓
 SQLite Logging + Recordings
-API Endpoints
+```
+
+
+## API Endpoints
 Send single notification
 POST /notify
 
@@ -60,6 +64,7 @@ Example payload:
   "extension": "1001",
   "message": "Hello, this is a voice notification"
 }
+
 
 Send batch notifications
 POST /notify-batch
