@@ -71,7 +71,7 @@ POST /notify-batch
 View logs
 GET /logs
 
-##Current Status
+## Current Status
 
 ✅ MVP completed with:
 
