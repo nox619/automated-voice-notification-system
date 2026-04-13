@@ -59,18 +59,19 @@ Send single notification
 POST /notify
 
 Example payload:
-
+```text
 {
   "extension": "1001",
   "message": "Hello, this is a voice notification"
 }
-
+```
 
 Send batch notifications
 POST /notify-batch
 View logs
 GET /logs
-Current Status
+
+##Current Status
 
 ✅ MVP completed with:
 
