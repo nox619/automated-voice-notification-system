@@ -75,15 +75,16 @@ GET /logs
 
 ✅ MVP completed with:
 
-dynamic TTS
-batch notifications
-retries
-database logging
-call recording
-FastAPI REST API
-Docker deployment
-Future Improvements
-scheduled notifications
-analytics dashboard
-async task queue
-cloud deployment
+- dynamic TTS
+- batch notifications
+- retries
+- database logging
+- call recording
+- FastAPI REST API
+- Docker deployment
+
+## Future Improvements
+- scheduled notifications
+- analytics dashboard
+- async task queue
+- cloud deployment
