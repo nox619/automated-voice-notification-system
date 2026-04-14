@@ -70,6 +70,69 @@ POST /notify-batch
 View logs
 GET /logs
 
+## Installation & Initial Setup
+
+### Install FreeSWITCH
+
+Install and start FreeSWITCH from source:
+
+```bash
+sudo /usr/local/freeswitch/bin/freeswitch -nonat
+```
+
+Verify the SIP profiles:
+
+```bash
+fs_cli
+```
+
+Inside the CLI:
+
+```text
+sofia status
+sofia status profile internal reg
+```
+
+---
+
+### Install Kamailio
+
+Install Kamailio:
+
+```bash
+sudo apt update
+sudo apt install kamailio -y
+```
+
+Start and enable the service:
+
+```bash
+sudo systemctl start kamailio
+sudo systemctl enable kamailio
+```
+
+Verify it is listening on SIP port `5060`:
+
+```bash
+sudo ss -tulpn | grep 5060
+```
+
+---
+
+### SIP Client Setup
+
+Use Zoiper as the SIP client.
+
+Configure the SIP account with:
+
+```text
+Domain   = 192.168.1.5:5060
+Username = 1001
+Password = 1234
+```
+
+This routes signaling through Kamailio and media through FreeSWITCH.
+
 
 ## Setup & Configuration
 
